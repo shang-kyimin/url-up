@@ -32,7 +32,7 @@ export default function RootLayout() {
         </div>
       </header>
       
-      <div className="mx-auto">
+      <div className="mx-auto pb-12">
         <Outlet />
       </div>
     </div>
