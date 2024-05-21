@@ -77,9 +77,17 @@ export default function LinksListComponent() {
                   {link.visited ? "Visited" : "New"}
                 </p>
 
-                <h6 className="font-semibold text-nowrap overflow-auto">
+                <h6 className="font-semibold text-nowrap overflow-auto flex gap-4">
                   <a href={link.url} className="block sm:hidden" target="_blank" onClick={() => changeVisitedLink(link)}>{link.title}</a>
                   <span className="hidden sm:block">{link.title}</span>
+
+                  <div className="flex gap-2">
+                    [
+                    {link.subject.map((sub) => (
+                      <span className="text-nowrap">{sub},</span>
+                    ))}
+                    ]
+                  </div>
                 </h6>
                 <a href={link.url} className="hidden sm:block underline" target="_blank" onClick={() => changeVisitedLink(link)}>{new URL(link.url).hostname}</a>
 
