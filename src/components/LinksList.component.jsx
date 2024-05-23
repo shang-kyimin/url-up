@@ -52,7 +52,7 @@ export default function LinksListComponent() {
   }
 
   function changeVisitedLink(data) {
-    mutation.mutate({ ...data, visited: !data.visited });
+    mutation.mutate({ ...data, visited: true });
     queryClient.resetQueries({ queryKey: ["links"] });
   }
 
